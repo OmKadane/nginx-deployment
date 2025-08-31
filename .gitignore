@@ -1,0 +1,11 @@
+# Ignore Visual Studio Code editor configuration
+.vscode/
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore Windows thumbnail cache
+Thumbs.db
+
+# Ignore log files
+*.log
