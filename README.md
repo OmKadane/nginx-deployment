@@ -68,17 +68,25 @@ Make sure you have the following software installed on your server (or WSL envir
 
 ### Deployment
 
-1.  **Navigate to your web root directory.** On our Ubuntu server setup, this is `/var/www/html`.
-2.  **Clone the repository** directly into your web root folder.
+1.  **Navigate to the web server directory** where sites are stored.
     ```sh
-    sudo git clone [https://github.com/](https://github.com/)OmKadane/nginx-deployment /var/www/html
+    cd /var/www
     ```
-3.  **Configure Nginx** by creating a server block that points to `/var/www/html` as the root.
-4.  **Restart Nginx** to apply the configuration.
+2.  **Clone the repository.** This will create a new folder named `nginx-deployment`.
+    ```sh
+    sudo git clone [https://github.com/OmKadane/nginx-deployment.git](https://github.com/OmKadane/nginx-deployment.git)
+    ```
+3.  **Replace the default web root** with your newly cloned repository.
+    ```sh
+    sudo rm -rf /var/www/html
+    sudo mv /var/www/nginx-deployment /var/www/html
+    ```
+4.  **Configure Nginx** by creating a server block that points to `/var/www/html` as the root.
+5.  **Restart Nginx** to apply the configuration.
     ```sh
     sudo systemctl restart nginx
     ```
-5.  Visit your server's IP address or `http://localhost` in a browser to see the live site. To update the site, simply `git pull` the latest changes from this repository.
+6.  Visit your server's IP address or `http://localhost` in a browser to see the live site. To update the site later, navigate to `/var/www/html` and run `sudo git pull`.
 
 ---
 
