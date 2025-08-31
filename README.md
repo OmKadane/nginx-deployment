@@ -93,4 +93,4 @@ Make sure you have the following software installed on your server (or WSL envir
 
 ## 📄 License
 
-Distributed under the MIT License. See [LICENSE]`LICENSE` file for more information.
+Distributed under the MIT License. See [LICENSE](LICENSE) file for more information.
