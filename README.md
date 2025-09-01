@@ -186,6 +186,6 @@ if __name__ == '__main__':
 </details> 
 
 ---
-### 📄 License  
+## 📄 License  
 
 Distributed under the **MIT License**. See the [LICENSE](./LICENSE) file for details.
