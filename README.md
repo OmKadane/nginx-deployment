@@ -98,12 +98,12 @@ Clone the project into the Nginx web root:
 cd /var/www
 
 ```
-### Clone the repo
+# Clone the repo
 ```
 sudo git clone [https://github.com/OmKadane/nginx-deployment.git](https://github.com/OmKadane/nginx-deployment.git)
 
 ```
-### Replace existing html folder with project
+# Replace existing html folder with project
 ```
 sudo rm -rf /var/www/html
 sudo mv /var/www/nginx-deployment /var/www/html
@@ -136,6 +136,8 @@ sudo systemctl restart nginx
 ```
 👉 For automated deployment, see [`deploy.sh`](./deploy.sh) and [`webhook.py`](./webhook.py).
 
-### 📄 License  
+```
+```
+## 📄 License  
 
 Distributed under the **MIT License**. See the [LICENSE](./LICENSE) file for details.
