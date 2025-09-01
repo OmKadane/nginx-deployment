@@ -98,12 +98,12 @@ Clone the project into the Nginx web root:
 cd /var/www
 
 ```
-# Clone the repo
+## Clone the repo
 ```
 sudo git clone [https://github.com/OmKadane/nginx-deployment.git](https://github.com/OmKadane/nginx-deployment.git)
 
 ```
-# Replace existing html folder with project
+## Replace existing html folder with project
 ```
 sudo rm -rf /var/www/html
 sudo mv /var/www/nginx-deployment /var/www/html
@@ -134,10 +134,51 @@ Then restart Nginx:
 sudo systemctl restart nginx
 
 ```
-👉 For automated deployment, see [`deploy.sh`](./deploy.sh) and [`webhook.py`](./webhook.py).
+
+## ⚙️ Server-Side Scripts
+
+The following scripts are not part of the website's repository but are placed on the server to handle the automated deployment.
+
+<details>
+<summary>Click to view <code>deploy.sh</code></summary>
+
+This script is executed by the Python listener and is responsible for updating the website files.
+
+```bash
+#!/bin/bash
+# Navigate to the website directory
+cd /var/www/html
+# Discard any local changes to prevent conflicts
+sudo git reset --hard
+# Pull the latest changes from the main branch
+sudo git pull origin main
 
 ```
-```
+</details>  
+<details>  
+<summary>Click to view <code>webhook.py</code></summary>  
+
+This Python Flask script runs on the server, listens for incoming webhook notifications from GitHub, and triggers the `deploy.sh` script.  
+
+</details>
+import subprocess
+from flask import Flask, request
+
+app = Flask(__name__)
+
+@app.route('/deploy', methods=['POST'])
+def deploy():
+    # This runs our deployment script
+    subprocess.run(['/var/www/deploy.sh'])
+    print("Deployment script executed.")
+    return 'Deployment successful!', 200
+
+if __name__ == '__main__':
+    # The listener will run on port 9000
+    app.run(host='0.0.0.0', port=9000)
+</details
+
 ## 📄 License  
 
 Distributed under the **MIT License**. See the [LICENSE](./LICENSE) file for details.
+
