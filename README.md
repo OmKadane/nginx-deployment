@@ -98,12 +98,44 @@ Clone the project into the Nginx web root:
 cd /var/www
 
 ```
-# Clone the repo
+### Clone the repo
 ```
 sudo git clone [https://github.com/OmKadane/nginx-deployment.git](https://github.com/OmKadane/nginx-deployment.git)
 
 ```
-# Replace existing html folder with project
+### Replace existing html folder with project
 ```
 sudo rm -rf /var/www/html
 sudo mv /var/www/nginx-deployment /var/www/html
+
+```
+### 3. Configure Nginx
+
+Create a server block inside `/etc/nginx/sites-available/`:
+
+```nginx
+server {
+    listen 80;
+    server_name your_domain_or_ip;
+
+    root /var/www/html;
+    index index.html;
+    charset utf-8;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}
+
+```
+Then restart Nginx:
+
+```bash
+sudo systemctl restart nginx
+
+```
+👉 For automated deployment, see [`deploy.sh`](./deploy.sh) and [`webhook.py`](./webhook.py).
+
+### 📄 License  
+
+Distributed under the **MIT License**. See the [LICENSE](./LICENSE) file for details.
