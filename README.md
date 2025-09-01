@@ -30,8 +30,11 @@ A professional static website served by **Nginx**, featuring a complete CI/CD pi
    - [A. Manual Deployment](#a-manual-deploymen)
    - [B. Automated CI/CD Deployment](#b-automated-cicd-deployment)
 4. [Initial Server Setup](#-initial-server-setup)
-5. [Server-Side Scripts](#-server-side-scripts)
-6. [License](#-license)
+   - [1. Prerequisites](#1-prerequisites)
+   - [2. Clone the Repository](#2-clone-the-repository)
+   - [3. Configure Nginx](#3-configure-nginx)
+6. [Server-Side Scripts](#%EF%B8%8F-server-side-scripts)
+7. [License](#-license)
 
 ---
 
@@ -100,12 +103,12 @@ cd /var/www
 
 ```
 Clone the repo
-```
+```bash
 sudo git clone https://github.com/OmKadane/nginx-deployment.git
 
 ```
 Replace existing html folder with project
-```
+```bash
 sudo rm -rf /var/www/html
 sudo mv /var/www/nginx-deployment /var/www/html
 
