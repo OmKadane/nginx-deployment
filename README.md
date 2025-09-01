@@ -98,12 +98,12 @@ Clone the project into the Nginx web root:
 cd /var/www
 
 ```
-## Clone the repo
+Clone the repo
 ```
 sudo git clone [https://github.com/OmKadane/nginx-deployment.git](https://github.com/OmKadane/nginx-deployment.git)
 
 ```
-## Replace existing html folder with project
+Replace existing html folder with project
 ```
 sudo rm -rf /var/www/html
 sudo mv /var/www/nginx-deployment /var/www/html
@@ -160,6 +160,7 @@ sudo git pull origin main
 
 This Python Flask script runs on the server, listens for incoming webhook notifications from GitHub, and triggers the `deploy.sh` script.  
 
+```python
 </details>
 import subprocess
 from flask import Flask, request
@@ -180,6 +181,5 @@ if __name__ == '__main__':
 
 ---
 ### 📄 License  
-
 Distributed under the **MIT License**. See the [LICENSE](./LICENSE) file for details.
 
