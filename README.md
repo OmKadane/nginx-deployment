@@ -67,6 +67,7 @@ This is the simplest method. After pushing changes to GitHub, you SSH into the s
 cd /var/www/html
 sudo git pull origin main
 
+---
 ### B. Automated CI/CD Deployment
 
 This is a fully automated "hands-off" process. A `git push` is all that's needed to update the live site.
@@ -89,6 +90,7 @@ To deploy this project, you first need to configure the server.
 * A Linux server with Nginx and Git installed.
 * Python 3 and `pip` for the automated workflow.
 
+---
 ### 2. Clone the Repository
 Clone the project into the Nginx web root directory.
 ```bash
@@ -100,6 +102,7 @@ sudo git clone [https://github.com/OmKadane/nginx-deployment.git](https://github
 sudo rm -rf /var/www/html
 sudo mv /var/www/nginx-deployment /var/www/html
 
+---
 ### 3. Configure Nginx
 Create and enable a server block in `/etc/nginx/sites-available/` that points to `/var/www/html` as its root.
 
@@ -117,6 +120,7 @@ server {
     }
 }
 
+---
 Finally, restart Nginx with `sudo systemctl restart nginx`.
 
 *(For the full automated deployment setup, see the project scripts `deploy.sh` and `webhook.py`)*.
