@@ -101,7 +101,7 @@ cd /var/www
 ```
 Clone the repo
 ```
-sudo git clone [https://github.com/OmKadane/nginx-deployment.git](https://github.com/OmKadane/nginx-deployment.git)
+sudo git clone https://github.com/OmKadane/nginx-deployment.git
 
 ```
 Replace existing html folder with project
