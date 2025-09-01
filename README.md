@@ -24,14 +24,14 @@ A professional static website served by **Nginx**, featuring a complete CI/CD pi
 ---
 
 ## 📋 Table of Contents
-1. [ℹ️ About The Project](#ℹ️-about-the-project)
-2. [🛠️ Tech Stack](#🛠️-tech-stack)
-3. [🔄 Deployment Workflows](#🔄-deployment-workflows)  
+1. [About The Project](#about-the-project)
+2. [Tech Stack](#tech-stack)
+3. [Deployment Workflows](#deployment-workflows)  
    - [A. Manual Deployment](#a-manual-deployment)  
    - [B. Automated CI/CD Deployment](#b-automated-cicd-deployment)  
-4. [🚀 Initial Server Setup](#🚀-initial-server-setup)
-5. [⚙️ Server-Side Scripts](#⚙️-server-side-scripts)
-6. [📄 License](#📄-license)
+4. [Initial Server Setup](#initial-server-setup)
+5. [Server-Side Scripts](#server-side-scripts)
+6. [License](#license)
 
 ---
 
@@ -184,4 +184,3 @@ if __name__ == '__main__':
 ---
 ### 📄 License  
 Distributed under the **MIT License**. See the [LICENSE](./LICENSE) file for details.
-
