@@ -136,6 +136,7 @@ sudo systemctl restart nginx
 
 ```
 
+---
 ## ⚙️ Server-Side Scripts
 
 The following scripts are not part of the website's repository but are placed on the server to handle the automated deployment.
