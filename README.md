@@ -24,14 +24,14 @@ A professional static website served by **Nginx**, featuring a complete CI/CD pi
 ---
 
 ## 📋 Table of Contents
-1. [About The Project](#ℹ️-about-the-project)
-2. [Tech Stack](#🛠️-tech-stack)
-3. [Deployment Workflows](#🔄-deployment-workflows)
-   - [A. Manual Deployment](#a-manual-deployment)
+1. [About The Project](#%E2%84%B9%EF%B8%8F-about-the-project)
+2. [Tech Stack](#%EF%B8%8F-tech-stack)
+3. [Deployment Workflows](#-deployment-workflows)
+   - [A. Manual Deployment](#a-manual-deploymen)
    - [B. Automated CI/CD Deployment](#b-automated-cicd-deployment)
-4. [Initial Server Setup](#🚀-initial-server-setup)
-5. [Server-Side Scripts](#⚙️-server-side-scripts)
-6. [License](#📄-license)
+4. [Initial Server Setup](#-initial-server-setup)
+5. [Server-Side Scripts](#-server-side-scripts)
+6. [License](#-license)
 
 ---
 
