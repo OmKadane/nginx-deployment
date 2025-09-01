@@ -71,78 +71,39 @@ After pushing changes to GitHub, SSH into the server and pull the latest version
 cd /var/www/html
 sudo git pull origin main
 
----
+```
 
 ### B. Automated CI/CD Deployment
 
 A **hands-off** approach: simply `git push` and the live site updates automatically.
 
 #### How It Works
-1. Developer runs `git push`.  
-2. GitHub sends a webhook notification to a public URL.  
-3. `ngrok` tunnels this notification to the **Flask listener** on the server.  
-4. Flask receives the signal and executes `deploy.sh`.  
-5. The script runs `sudo git pull` to update the website files.  
+1.  Developer runs `git push`.
+2.  GitHub sends a webhook notification to a public URL.
+3.  `ngrok` tunnels this notification to the **Flask listener** on the server.
+4.  Flask receives the signal and executes `deploy.sh`.
+5.  The script runs `sudo git pull` to update the website files.
 
 ---
-
 ## 🚀 Initial Server Setup
 
 ### 1. Prerequisites
-- Linux server with **Nginx** and **Git** installed.  
-- Python 3 + pip (for the automated workflow).  
-
----
+- Linux server with **Nginx** and **Git** installed.
+- Python 3 + `pip` (for the automated workflow).
 
 ### 2. Clone the Repository
 Clone the project into the Nginx web root:
-
 ```bash
 # Navigate to the web server directory
 cd /var/www
 
+```
 # Clone the repo
-sudo git clone https://github.com/OmKadane/nginx-deployment.git
+```
+sudo git clone [https://github.com/OmKadane/nginx-deployment.git](https://github.com/OmKadane/nginx-deployment.git)
 
+```
 # Replace existing html folder with project
+```
 sudo rm -rf /var/www/html
 sudo mv /var/www/nginx-deployment /var/www/html
-
----
-
-### 3. Configure Nginx
-
-Create a server block inside `/etc/nginx/sites-available/`:
-
-```nginx
-server {
-    listen 80;
-    server_name your_domain_or_ip;
-
-    root /var/www/html;
-    index index.html;
-    charset utf-8;
-
-    location / {
-        try_files $uri $uri/ =404;
-    }
-}
-
----
-
-## Then restart Nginx:
-
----
-
-```bash
-sudo systemctl restart nginx
-
----
-
-👉 For automated deployment, see [`deploy.sh`](./deploy.sh) and [`webhook.py`](./webhook.py).
-
----
-
-## 📄 License  
-
-Distributed under the **MIT License**. See the [LICENSE](./LICENSE) file for details.
