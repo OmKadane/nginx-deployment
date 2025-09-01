@@ -176,9 +176,10 @@ def deploy():
 if __name__ == '__main__':
     # The listener will run on port 9000
     app.run(host='0.0.0.0', port=9000)
-</details
+</details>'''
 
-## 📄 License  
+---
+### 📄 License  
 
 Distributed under the **MIT License**. See the [LICENSE](./LICENSE) file for details.
 
