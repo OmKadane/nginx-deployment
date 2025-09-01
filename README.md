@@ -30,7 +30,8 @@ A professional static website served by **Nginx**, featuring a complete CI/CD pi
    - [A. Manual Deployment](#a-manual-deployment)  
    - [B. Automated CI/CD Deployment](#b-automated-cicd-deployment)  
 4. [🚀 Initial Server Setup](#🚀-initial-server-setup)
-5. [📄 License](#📄-license)
+5. [⚙️ Server-Side Scripts](#⚙️-server-side-scripts)
+6. [📄 License](#📄-license)
 
 ---
 
@@ -178,6 +179,8 @@ if __name__ == '__main__':
     app.run(host='0.0.0.0', port=9000)
 
 ```
+</details> 
+
 ---
 ### 📄 License  
 Distributed under the **MIT License**. See the [LICENSE](./LICENSE) file for details.
