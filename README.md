@@ -161,7 +161,6 @@ sudo git pull origin main
 This Python Flask script runs on the server, listens for incoming webhook notifications from GitHub, and triggers the `deploy.sh` script.  
 
 ```python
-</details>
 import subprocess
 from flask import Flask, request
 
@@ -177,8 +176,8 @@ def deploy():
 if __name__ == '__main__':
     # The listener will run on port 9000
     app.run(host='0.0.0.0', port=9000)
-</details>'''
 
+```
 ---
 ### 📄 License  
 Distributed under the **MIT License**. See the [LICENSE](./LICENSE) file for details.
