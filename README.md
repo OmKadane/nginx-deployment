@@ -9,6 +9,7 @@ A professional static website served by **Nginx**, featuring a complete CI/CD pi
 [![GitHub Issues](https://img.shields.io/github/issues/OmKadane/nginx-deployment)](https://github.com/OmKadane/nginx-deployment/issues)
 [![GitHub Stars](https://img.shields.io/github/stars/OmKadane/nginx-deployment)](https://github.com/OmKadane/nginx-deployment/stargazers)
 [![Last Commit](https://img.shields.io/github/last-commit/OmKadane/nginx-deployment)](https://github.com/OmKadane/nginx-deployment/commits/main)
+[![Repo Size](https://img.shields.io/github/repo-size/OmKadane/nginx-deployment)](https://github.com/OmKadane/nginx-deployment)
 
 ---
 
